@@ -4,8 +4,9 @@
   {{else}}
   <button {{action 'hideAdminPortal'}}>Hide Admin Portal</button>
   <div class="col-sm-6 ">
-    <h1>Add Post</h1>
     {{new-post savePost="savePost"}}
+    <hr>
+    {{new-city saveCity="saveCity"}}
   </div>
   <div class="col-sm-6">
     <h1>Update Posts</h1>

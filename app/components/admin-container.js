@@ -17,6 +17,9 @@ export default Ember.Component.extend({
     },
     deletePost(params) {
       this.sendAction('deletePost', params);
-    }
+    },
+    saveCity(params) {
+      this.sendAction('saveCity', params);
+    },
   }
 });

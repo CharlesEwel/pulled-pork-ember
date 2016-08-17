@@ -5,10 +5,9 @@
 <div>
   <p>View by Location</p>
   {{radio-button value='all' groupValue=filterBy}} All
-  {{radio-button value='Portland' groupValue=filterBy}} Portland
-  {{radio-button value='Chicago' groupValue=filterBy}} Chicago
-  {{radio-button value='San Francisco' groupValue=filterBy}} San Francisco
-  {{radio-button value='Oklahoma City' groupValue=filterBy}} Oklahoma City
+  {{#each location-list as |location|}}
+    {{radio-button value=location.city groupValue=filterBy}} {{location.city}}
+  {{/each}}
 </div>
 {{/if}}
 {{#each post-list as |post index|}}
