@@ -18,7 +18,11 @@
 
     <div class="form-group">
       <label for="location">Location</label>
-      {{input value=location id="location"}}
+      <select name="location" onchange={{action "updateValue" value="target.value"}}>
+        {{#each location-list as |location|}}
+          <option value={{location.city}} selected={{eq selectedLocation location}}>{{location.city}}</option>
+        {{/each}}
+      </select>
     </div>
 
     <div class="form-group">
@@ -32,6 +36,7 @@
     </div>
 
     <button{{action 'savePost'}}>Save</button>
+    <button{{action 'cancel'}}>Cancel</button>
   </form>
   {{else}}
     <h1>Add Post</h1>
