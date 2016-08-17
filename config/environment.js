@@ -4,6 +4,12 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'pulled-pork-blog',
     environment: environment,
+    firebase: {
+      apiKey: "AIzaSyDMYnrGecb-AeXJc-0kCqHIYu9zn7kVGRI",
+      authDomain: "pulledporkblog.firebaseapp.com",
+      databaseURL: "https://pulledporkblog.firebaseio.com",
+      storageBucket: "pulledporkblog.appspot.com",
+    },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

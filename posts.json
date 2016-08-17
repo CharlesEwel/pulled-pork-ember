@@ -1,0 +1,26 @@
+{ "posts": [{
+    "title": "Screen Door",
+    "content": "Overrated",
+    "author": "Sebastian Prokuski",
+    "date": "2016-05-16",
+    "image": "placeholder.com"
+  }, {
+    "title": "People's Pig",
+    "content": "Very Good. Gave me a tray of food",
+    "author": "Sebastian Prokuski",
+    "date": "2016-06-21",
+    "image": "placeholder.com"
+  }, {
+    "title": "Rudy's",
+    "content": "Good and Cheap",
+    "author": "Charles Ewel",
+    "date": "2015-12-10",
+    "image": "placeholder.com"
+    }, {
+    "title": "Van's Pig Stand",
+    "content": "Excellent. Very Moist",
+    "author": "Charles Ewel",
+    "date": "2015-10-20",
+    "image": "placeholder.com"
+  }]
+}
