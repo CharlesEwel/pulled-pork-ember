@@ -12,7 +12,8 @@ export default Ember.Component.extend({
         author: this.get('author'),
         content: this.get('content'),
         image: this.get('image'),
-        date: this.get('date')
+        date: this.get('date'),
+        location: this.get('location')
       };
       this.set('addNewPost', false);
       this.sendAction('savePost', params);
@@ -21,6 +22,7 @@ export default Ember.Component.extend({
       this.set('content', '');
       this.set('image', '');
       this.set('date', '');
+      this.set('location', '');
     }
   }
 });

@@ -12,7 +12,8 @@ export default Ember.Component.extend({
       content: this.get('content'),
       author: this.get('author'),
       image: this.get('image'),
-      date: this.get('date')
+      date: this.get('date'),
+      location: this.get('location');
     };
     this.set('editPostForm', false);
     this.sendAction('editPost', post, params);
@@ -21,6 +22,7 @@ export default Ember.Component.extend({
     this.set('content', '');
     this.set('image', '');
     this.set('date', '');
+    this.set('location', '');
   }
 }
 });
