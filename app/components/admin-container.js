@@ -21,5 +21,8 @@ export default Ember.Component.extend({
     saveCity(params) {
       this.sendAction('saveCity', params);
     },
+    saveTag(params) {
+      this.sendAction('saveTag', params);
+    }
   }
 });

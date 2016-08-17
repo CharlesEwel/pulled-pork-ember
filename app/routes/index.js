@@ -4,7 +4,8 @@ export default Ember.Route.extend({
   model() {
     return Ember.RSVP.hash({
     posts: this.store.findAll('post'),
-    locations: this.store.findAll('location')
+    locations: this.store.findAll('location'),
+    tags: this.store.findAll('tag')
     });
   },
   actions:{
@@ -33,5 +34,10 @@ export default Ember.Route.extend({
       newCity.save();
       this.transitionTo('index');
     },
+    saveTag(params) {
+      var newTag = this.store.createRecord('tag', params);
+      newTag.save();
+      this.transitionTo('index');
+    }
   }
 });

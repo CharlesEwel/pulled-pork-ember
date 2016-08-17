@@ -33,12 +33,20 @@
     }, {
       "city": "Oklahoma City",
       "country": "USA"
-      },
-    {
+    }, {
       "city": "Chicago",
       "country": "USA"
     }, {
       "city": "San Francisco",
       "country": "USA"
-    }]
+  }],
+    "tags": [{
+      "name": "spicy"
+      }, {
+      "name": "sweet"
+      }, {
+      "name": "overrated"
+      }, {
+      "name": "underrated"
+   }]
 }

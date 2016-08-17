@@ -2,11 +2,13 @@
   {{#if adminPortalHidden}}
   <button {{action 'showAdminPortal'}}>Show Admin Portal</button>
   {{else}}
-  <button {{action 'hideAdminPortal'}}>Hide Admin Portal</button>
   <div class="col-sm-6 ">
+    <button {{action 'hideAdminPortal'}}>Hide Admin Portal</button>
     {{new-post savePost="savePost" location-list=location-list}}
     <hr>
     {{new-city saveCity="saveCity"}}
+    <hr>
+    {{new-tag saveTag="saveTag"}}
   </div>
   <div class="col-sm-6">
     <h1>Update Posts</h1>
