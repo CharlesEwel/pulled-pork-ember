@@ -1,0 +1,24 @@
+<div class="row well">
+  {{#if adminPortalHidden}}
+  <button {{action 'showAdminPortal'}}>Show Admin Portal</button>
+  {{else}}
+  <button {{action 'hideAdminPortal'}}>Hide Admin Portal</button>
+  <div class="col-sm-6 ">
+    <h1>Add Post</h1>
+    {{new-post savePost="savePost"}}
+  </div>
+  <div class="col-sm-6">
+    <h1>Update Posts</h1>
+    <div class="row">
+      {{#each post-list as |post|}}
+      <div class="col-sm-12">
+        <p>{{post.title}}
+          <button class="inline-button pull-right" {{action 'delete' post}}>Delete</button>
+          <span class="pull-right">{{edit-post post=post editPost="editPost"}}</span>
+        </p>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  {{/if}}
+</div>

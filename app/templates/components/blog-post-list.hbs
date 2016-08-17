@@ -1,3 +1,17 @@
-{{#each post-list as |post|}}
-  {{post-tile post=post}}
+{{#if (eq displayLength 5)}}
+<h2>Recent Posts</h2>
+{{else}}
+<h2>All Posts</h2>
+{{/if}}
+{{#each post-list as |post index|}}
+  {{#if (leq post-list.length index displayLength)}}
+    {{post-tile post=post}}
+  {{/if}}
 {{/each}}
+{{#if (eq displayLength 5)}}
+<button {{action 'showAll'}}>Show All</button>
+{{else}}
+<button {{action 'showRecent'}}>Show Recent</button>
+{{/if}}
+
+<br><br>

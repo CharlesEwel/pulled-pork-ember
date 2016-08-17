@@ -6,7 +6,7 @@ export default Ember.Component.extend({
   editPostForm() {
     this.set('editPostForm', true);
   },
-  edit(post) {
+  editPost(post) {
     var params = {
       title: this.get('title'),
       content: this.get('content'),
@@ -15,7 +15,7 @@ export default Ember.Component.extend({
       date: this.get('date')
     };
     this.set('editPostForm', false);
-    this.sendAction('edit', post, params);
+    this.sendAction('editPost', post, params);
   }
 }
 });
