@@ -19,7 +19,7 @@ export default Ember.Route.extend({
       post.save();
       this.transitionTo('index');
     },
-    delete(post) {
+    deletePost(post) {
       if (confirm('Are you sure you want to delete this post?')) {
         post.destroyRecord();
         this.transitionTo('index');

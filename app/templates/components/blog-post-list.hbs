@@ -2,10 +2,23 @@
 <h2>Recent Posts</h2>
 {{else}}
 <h2>All Posts</h2>
+<div>
+  <p>View by Location</p>
+  {{radio-button value='all' groupValue=filterBy}} All
+  {{radio-button value='Portland' groupValue=filterBy}} Portland
+  {{radio-button value='Chicago' groupValue=filterBy}} Chicago
+  {{radio-button value='San Francisco' groupValue=filterBy}} San Francisco
+  {{radio-button value='Oklahoma City' groupValue=filterBy}} Oklahoma City
+</div>
 {{/if}}
 {{#each post-list as |post index|}}
   {{#if (leq post-list.length index displayLength)}}
-    {{post-tile post=post}}
+    {{#if (eq filterDefinition post.location)}}
+      {{post-tile post=post}}
+    {{/if}}
+    {{#if (eq filterDefinition 'all')}}
+      {{post-tile post=post}}
+    {{/if}}
   {{/if}}
 {{/each}}
 {{#if (eq displayLength 5)}}

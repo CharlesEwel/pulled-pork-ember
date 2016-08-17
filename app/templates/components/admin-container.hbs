@@ -13,7 +13,7 @@
       {{#each post-list as |post|}}
       <div class="col-sm-12">
         <p>{{post.title}}
-          <button class="inline-button pull-right" {{action 'delete' post}}>Delete</button>
+          <button class="inline-button pull-right" {{action 'deletePost' post}}>Delete</button>
           <span class="pull-right">{{edit-post post=post editPost="editPost"}}</span>
         </p>
       </div>

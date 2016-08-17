@@ -13,7 +13,7 @@ export default Ember.Component.extend({
       author: this.get('author'),
       image: this.get('image'),
       date: this.get('date'),
-      location: this.get('location');
+      location: this.get('location')
     };
     this.set('editPostForm', false);
     this.sendAction('editPost', post, params);
