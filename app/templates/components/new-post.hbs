@@ -19,7 +19,7 @@
     <div class="form-group">
       <label for="location">Location</label>
       <select name="location" onchange={{action "updateValue" value="target.value"}}>
-          <option selected="selected" disabled="">Select a location</option>
+          <option value="#" selected="selected" disabled="">Select a location</option>
         {{#each location-list as |location index|}}
           <option value={{index}} selected={{eq selectedLocation index}}>{{location.city}}, {{location.country}}</option>
         {{/each}}

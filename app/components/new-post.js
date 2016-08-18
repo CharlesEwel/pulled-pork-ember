@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   addNewPost: false,
+  selectedLocation: -1,
   actions: {
     articleFormShow(){
       this.set('addNewPost', true);
@@ -26,6 +27,7 @@ export default Ember.Component.extend({
         this.set('content', '');
         this.set('image', '');
         this.set('date', '');
+        this.set('selectedLocation', -1);
       } else {
         alert('Please fill out all fields.');
       }
@@ -37,6 +39,7 @@ export default Ember.Component.extend({
       this.set('content', '');
       this.set('image', '');
       this.set('date', '');
+      this.set('selectedLocation', -1);
     }
   }
 });
