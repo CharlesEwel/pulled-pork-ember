@@ -2,7 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   editPostForm: false,
-  selectedLocation: 0,
   actions: {
     editPostForm() {
       this.set('editPostForm', true);

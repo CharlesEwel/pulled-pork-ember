@@ -1,7 +1,27 @@
-<h1>{{model.title}}</h1>
-<h4>{{model.location.city}}, {{model.location.country}}</h4>
-<h3>{{model.author}}</h3>
-<h4>{{model.date}}</h4>
+<h1>{{model.post.title}}</h1>
+<h4>{{model.post.location.city}}, {{model.post.location.country}}</h4>
+<h3>{{model.post.author}}</h3>
+<h4>{{model.post.date}}</h4>
 
-<img src={{model.image}} alt={{model.title}}>
-<p>{{model.content}}</p>
+<img src={{model.post.image}} alt={{model.post.title}}>
+<p>{{model.post.content}}</p>
+
+<h1>Tags</h1>
+{{#each model.post.tags as |tag|}}
+    {{tag.name}}
+    <button {{action 'removeTag' tag model.post}}>Remove Tag</button><br>
+{{else}}
+  <p>No tags have been added yet</p>
+{{/each}}
+
+<h1>Add Tags</h1>
+<div class="form-group">
+  {{#each model.tags as |tag|}}
+  {{#if (contains model.post.tags tag)}}
+  {{else}}
+    <button {{action 'addTag' tag model.post}}>
+      {{tag.name}}
+    </button><br>
+  {{/if}}
+  {{/each}}
+</div>

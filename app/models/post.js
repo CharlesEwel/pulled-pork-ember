@@ -6,5 +6,6 @@ export default DS.Model.extend({
   author: DS.attr(),
   date: DS.attr(),
   image: DS.attr(),
-  location: DS.belongsTo('location', { async: true })
+  location: DS.belongsTo('location', { async: true }),
+  tags: DS.hasMany('tag', { async: true })
 });

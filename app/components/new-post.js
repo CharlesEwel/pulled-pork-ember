@@ -16,8 +16,7 @@ export default Ember.Component.extend({
         content: this.get('content'),
         image: this.get('image'),
         date: this.get('date'),
-        location: this.get('location-list').objectAt(this.get('selectedLocation')),
-
+        location: this.get('location-list').objectAt(this.get('selectedLocation'))
       };
       if (params.title !== undefined && params.author !== undefined && params.content !== undefined && params.image !== undefined && params.date !== undefined && params.location !== undefined) {
         this.set('addNewPost', false);

@@ -36,13 +36,6 @@
       {{input value=image id="image"}}
     </div>
 
-    <div class="form-group">
-      <label for="tags">Tags</label><br>
-      {{#each tag-list as |tag|}}
-        {{input type="checkbox" id="tag.name"}} {{tag.name}} <br>
-      {{/each}}
-    </div>
-
     <button{{action 'savePost'}}>Save</button>
     <button{{action 'cancel'}}>Cancel</button>
   </form>
