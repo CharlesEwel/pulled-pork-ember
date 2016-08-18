@@ -12,7 +12,7 @@
 {{/if}}
 {{#each post-list as |post index|}}
   {{#if (leq post-list.length index displayLength)}}
-    {{#if (eq filterDefinition post.location)}}
+    {{#if (eq filterDefinition post.location.city)}}
       {{post-tile post=post}}
     {{/if}}
     {{#if (eq filterDefinition 'all')}}

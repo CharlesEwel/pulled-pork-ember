@@ -19,8 +19,9 @@
     <div class="form-group">
       <label for="location">Location</label>
       <select name="location" onchange={{action "updateValue" value="target.value"}}>
-        {{#each location-list as |location|}}
-          <option value={{location.city}} selected={{eq selectedLocation location}}>{{location.city}}</option>
+          <option selected="selected" disabled="">Select a location</option>
+        {{#each location-list as |location index|}}
+          <option value={{index}} selected={{eq selectedLocation index}}>{{location.city}}, {{location.country}}</option>
         {{/each}}
       </select>
     </div>
@@ -33,6 +34,13 @@
     <div class="form-group">
       <label for="image">Image</label>
       {{input value=image id="image"}}
+    </div>
+
+    <div class="form-group">
+      <label for="tags">Tags</label><br>
+      {{#each tag-list as |tag|}}
+        {{input type="checkbox" id="tag.name"}} {{tag.name}} <br>
+      {{/each}}
     </div>
 
     <button{{action 'savePost'}}>Save</button>

@@ -11,10 +11,14 @@ export default Ember.Component.extend({
         city: this.get('city'),
         country: this.get('country'),
       };
-      this.set('addNewCity', false);
-      this.sendAction('saveCity', params);
-      this.set('city', '');
-      this.set('country', '');
+      if (params.city !== undefined && params.country !== undefined) {
+        this.set('addNewCity', false);
+        this.sendAction('saveCity', params);
+        this.set('city', '');
+        this.set('country', '');
+      } else {
+        alert('Please fill out all fields.');
+      }
     },
     cancel(){
       this.set('addNewCity', false);

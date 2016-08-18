@@ -4,7 +4,7 @@
   {{else}}
   <div class="col-sm-6 ">
     <button {{action 'hideAdminPortal'}}>Hide Admin Portal</button>
-    {{new-post savePost="savePost" location-list=location-list}}
+    {{new-post savePost="savePost" location-list=location-list tag-list=tag-list}}
     <hr>
     {{new-city saveCity="saveCity"}}
     <hr>
@@ -17,7 +17,7 @@
       <div class="col-sm-12">
         <p>{{post.title}}
           <button class="inline-button pull-right" {{action 'deletePost' post}}>Delete</button>
-          <span class="pull-right">{{edit-post post=post editPost="editPost"}}</span>
+          <span class="pull-right">{{edit-post post=post location-list=location-list editPost="editPost"}}</span>
         </p>
       </div>
       {{/each}}

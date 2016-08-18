@@ -19,7 +19,11 @@
 
         <div class="form-group">
           <label for="location">Location</label>
-          {{input value=location id="location" placeholder=post.location}}
+          <select name="location" onchange={{action "updateValue" value="target.value"}}>
+            {{#each location-list as |location index|}}
+              <option value={{index}} selected={{eq selectedLocation index}}>{{location.city}}, {{location.country}}</option>
+            {{/each}}
+          </select>
         </div>
 
         <div class="form-group">
@@ -33,6 +37,7 @@
         </div>
 
         <button {{action 'editPost' post}}>Update</button>
+        <button{{action 'cancel'}}>Cancel</button>
       </form>
     </div>
 {{else}}
